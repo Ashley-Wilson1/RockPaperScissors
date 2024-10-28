@@ -10,7 +10,30 @@ function getComputerChoice()
     else{
         return "Scissors"
     }
-
 }
 
+function getHumanChoice(){
+    let valid = ["rock","paper","scissors"]
+    let invalid = true
+    let choice =""
+    while(invalid){
+        let choice = prompt("rock, paper, or scissors?")
+        if(valid.includes(choice.toLowerCase())){
+            invalid=false
+            
+        }
+        else{
+            prompt("enter a correct option")
+
+        }
+    }
+    return choice
+}
+
+
+
+    
+
+
 console.log(getComputerChoice());
+console.log(getHumanChoice())
